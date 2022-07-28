@@ -3,12 +3,12 @@ import Link from 'next/link'
 import Layout, { siteTitle } from '../components/layout'
 import utilStyles from '../styles/utils.module.css'
 
-import { getPostData, getSortedPostsData } from '../lib/posts'
+import { getProfileData, getSortedPostsData } from '../lib/posts'
 import Date from '../components/date'
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData()
-	const aboutMe = await getPostData('introductionMe')
+	const aboutMe = await getProfileData('introductionMe')
 	return {
 		props: {
 			allPostsData,
