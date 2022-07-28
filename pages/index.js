@@ -81,7 +81,6 @@ export default function Home({ allPostsData, aboutMe }) {
 				<h2 className={utilStyles.headingLg}>Blog</h2>
 				<ul className={utilStyles.list}>
 					{allPostsData.map(({ id, date, title }) => {
-						console.log(id)
 						if (id === 'introductionMe') return null
 						return (
 							<li className={utilStyles.listItem} key={id}>
